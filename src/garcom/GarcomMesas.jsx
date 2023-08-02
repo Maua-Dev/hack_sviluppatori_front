@@ -11,7 +11,7 @@ function GarcomMesas(){
     React.useEffect(() => {
         axios.get('http://localhost:3001/mesas')
         .then((response) => {
-            setMesas(response.data.filter((mesa) => mesa.chamada == false))
+            setMesas(response.data.filter((mesa) => mesa.chamada === false))
         })});
 
     return(

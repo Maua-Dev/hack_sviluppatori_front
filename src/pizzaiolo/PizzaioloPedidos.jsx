@@ -1,7 +1,5 @@
-import react from 'react';
 import {Body} from '../styled-components/Body';
 import {Container, Row, Col, Card, Button} from 'react-bootstrap';
-import {BotoesDiv, Botao, Redirecionar} from '../recepcionista/styled-components/Botoes';
 import {Pedido} from '../recepcionista/styled-components/Pedidos';
 
 
