@@ -9,7 +9,6 @@ import Blueprint from "../garcom/imgs/Pizza_Pepperoni.png";
 import axios from 'axios';
 
 function Cardapio() {
-  const [loading, setLoading] = useState(true);
   const [selectedMenu, setSelectedMenu] = useState(null);
   const [selectedItems, setSelectedItems] = useState([]);
   const menuOptions = ['Entradas', 'Bebidas', 'Pizzas', 'Sobremesas'];
@@ -26,7 +25,6 @@ function Cardapio() {
         setBebidas(response.data.filter((produto) => produto.tipo === "Bebidas"));
         setPizzas(response.data.filter((produto) => produto.tipo === "Pizzas"));
         setSobremesas(response.data.filter((produto) => produto.tipo === "Sobremesas"));
-        setLoading(false);
         setMenuItems(response.data.filter((produto) => produto.tipo === "Entradas"));
       })
       .catch((error) => {

@@ -90,7 +90,7 @@ function Ingredientes(){
                     <NavbarD>
                     <Navbar.Brand href="/">
                         <NavbarBrandD>
-                        Sviluppatori  
+                        <img alt= "Logo Sviluppatori" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" height="120px"/> 
                         </NavbarBrandD>
                     </Navbar.Brand>
                     </NavbarD>

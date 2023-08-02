@@ -1,4 +1,3 @@
-import react from 'react';
 import {Body} from '../styled-components/Body';
 import {Container, Row, Col, Card} from 'react-bootstrap';
 import {BotoesDiv, Botao, Redirecionar} from '../recepcionista/styled-components/Botoes';
