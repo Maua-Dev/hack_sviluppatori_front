@@ -5,8 +5,7 @@ A Sviluppatori Pizzaria é dividida em duas frentes: A parte do cliente e do fun
 
 ## Link para a plataforma
 
-(https://d2yeoa37wbc5z6.cloudfront.net)
-[Sviluppatori Pizzaria]
+[Sviluppatori Pizzaria](https://d2yeoa37wbc5z6.cloudfront.net)
 
 
 ## Estrutura do Projeto
@@ -41,5 +40,5 @@ Caso o usuário seja da recepção, ele tem acesso a duas telas. Uma delas é de
 ## Outros repositórios
 Aqui está o acesso aos outros repositórios criados para o projeto:
 
-(https://github.com/MateusCMartins724/SviluppatoriPizzaria)
-(https://github.com/Maua-Dev/hack_g4_sviluppatori_front)
+[Repositório 1](https://github.com/MateusCMartins724/SviluppatoriPizzaria)
+[Repositório 2](https://github.com/Maua-Dev/hack_g4_sviluppatori_front)
