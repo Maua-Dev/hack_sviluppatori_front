@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar'
 import {Body, Main} from './styled-components/Body.jsx';
 import {Text, Header, H1} from './styled-components/Text.jsx';
-import {NavbarD, NavbarBrandD} from './styled-components/Navbar.jsx';
 import {CardD, CardTitleD, CardBodyD} from './styled-components/Card.jsx';
 
 
@@ -12,13 +11,9 @@ function Inicio() {
   return (
     <Body>
     <Navbar>
-      <NavbarD>
-        <Navbar.Brand href="/">
-          <NavbarBrandD>
-          Sviluppatori Pizzaria
-          </NavbarBrandD>
-        </Navbar.Brand>
-      </NavbarD>
+      <Navbar.Brand style={{marginLeft: "10px"}} href="/">
+        <img alt= "Logo Sviluppatori" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" height="120px"/>
+      </Navbar.Brand>
     </Navbar> 
     <Header>
       <Container>

@@ -4,7 +4,7 @@ const BotoesDiv = style.div`
     background-color: #7D3133;
     border: 1px solid #7D3133;
     border-radius: 5px;
-    margin-top: 120%;
+    margin-top: 80%;
     padding-left: 0 
     padding-bottom: 32px;
     `;

@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navbar from "react-bootstrap/Navbar";
-import {NavbarD, NavbarBrandD} from "../styled-components/Navbar";
 import {Input, Label} from "../admin/styled-components/Modal";
 import {BotoesDiv, Botao, BotaoA} from "../admin/styled-components/Botoes";
 import {TabelaD, Tabela, TabelaRow, TabelaHead, TabelaData, TabelaH, TabelaTdBotao, TabelaBotao, Svg} from "../admin/styled-components/Tabela";
@@ -93,15 +92,11 @@ function AdminFinanceiro(){
                     </Button>
                 </Modal.Footer>
             </Modal>
-                <Navbar>
-                    <NavbarD>
-                    <Navbar.Brand href="/">
-                        <NavbarBrandD>
-                        <img alt= "Logo Sviluppatori" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" height="120px"/>
-                        </NavbarBrandD>
-                    </Navbar.Brand>
-                    </NavbarD>
-                </Navbar>
+            <Navbar>
+                <Navbar.Brand style={{marginLeft: "10px"}} href="/">
+                    <img alt= "Logo Sviluppatori" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" height="120px"/>
+                </Navbar.Brand>
+            </Navbar>
             <Container fluid>
                 <Row>
                     <Col md={3} style={{padding: 0}}>
