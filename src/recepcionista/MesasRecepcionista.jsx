@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import {BotoesDiv, Botao, Redirecionar} from './styled-components/Botoes'
 import {MesaDiv, Select, Option} from './styled-components/Mesas'
 import {Imagem} from './styled-components/Imagem'
-import Blueprint from '../garcom/imgs/blueprint.jpg'
+import Blueprint from './imgs/blueprint.png'
 
 function MesasRecepcionista(){
     return(

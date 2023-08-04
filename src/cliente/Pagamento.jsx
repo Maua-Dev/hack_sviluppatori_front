@@ -2,6 +2,7 @@ import React from 'react'
 import {PagamentoContext} from './context/Pagamento'
 import {ContainerCard, Card,TextoCard,TituloCard, BotaoCard} from './styled-components/Pagamento'    
 import { Toast } from 'react-bootstrap';
+import {ToastContainer} from './styled-components/Toast'
 
 
 function Pagamento(){
@@ -16,14 +17,16 @@ function Pagamento(){
 
     return(
         <div>
-        <Toast show={showA} onClose={() => setShowA(false)} style={{fontSize: "24px", color: "black"}}>
-        <Toast.Header>
-          <img height="32px" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" className="rounded me-2" alt="" />
-          <strong className="me-auto">Sviluppatori informa: </strong>
-          <small>1 segundo</small>
-        </Toast.Header>
-        <Toast.Body>Seu garçom foi chamado. Por favor, aguarde!</Toast.Body>
-      </Toast>
+        <ToastContainer> 
+          <Toast show={showA} onClose={() => setShowA(false)} style={{fontSize: "24px", color: "black"}}>
+          <Toast.Header>
+            <img height="32px" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" className="rounded me-2" alt="" />
+            <strong className="me-auto">Sviluppatori informa: </strong>
+            <small>1 segundo</small>
+          </Toast.Header>
+          <Toast.Body>Seu garçom foi chamado. Por favor, aguarde!</Toast.Body>
+          </Toast>
+        </ToastContainer>
       {pagamento ? (
         <>
           <h1>Pagamento</h1>

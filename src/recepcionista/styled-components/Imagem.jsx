@@ -2,7 +2,7 @@ import style from 'styled-components';
 
 const Imagem = style.img`
     width: 100%;
-    height: 90%;
+    height: 75%;
     border-radius: 5px;
     border: 1px solid #7D3133;
     display: flex;

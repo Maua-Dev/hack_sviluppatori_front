@@ -6,7 +6,9 @@ import {TextoCard, TituloCard} from './styled-components/Card';
 import {Container, Row, Col, Card, Toast } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { PagamentoContext } from './context/Pagamento';
-
+import { MenuContainer, MenuList, MenuItem, ActionsContainer, ActionButton, OrderContainer, ConfirmButton,
+MenuContent, MenuRow } from './styled-components/Cardapio';
+import {ToastContainer} from './styled-components/Toast'; 
 let listaEntradas = [
   {
     nome: "Bruschetta",
@@ -239,90 +241,88 @@ function Cardapio() {
     console.log(pedido)
     setShowB(true);
   }
-
   return (
     <Body>
+      <h1>Menu de Pizzas</h1>
+      <Container fluid style={{ paddingLeft: "0px" }}>
+        <Row>
+          <Col xs={2}>
+            <ActionsContainer>
+              <ActionButton onClick={chamarGarcom}>Chamar Garçom</ActionButton>
+              <ActionButton onClick={navegarPagamento}>Efetuar Pagamento</ActionButton>
+            </ActionsContainer>
+          </Col>
+          <Col xs={8}>
+            <MenuContainer>
+              <MenuList>
+                {menuOptions.map((option, i) => (
+                  <MenuItem
+                    key={i}
+                    className={`  ${selectedMenu === i ? 'active' : ''}`}
+                    onClick={() => handleMenuItemClick(i)}
+                  >
+                    {option}
+                  </MenuItem>
+                ))}
+              </MenuList>
+            </MenuContainer>
+            {selectedMenu !== null && (
+              <MenuContent>
+                {menuItems.map((item, index) => (
+                  <MenuRow key={index}>
+                      <Card style={{ backgroundColor: "#abb78b", border: "0px", cursor: "pointer", marginBottom: "16px" }} onClick={() => handleMenuItemSelect([item.nome,item.preco])}>
+                        <Card.Img src={item.imagem} style={{ width: "160px", height: "160px", marginLeft: "16px", margin: "auto" }} alt="Pizza" />
+                        <Card.Body>
+                          <Card.Text>
+                            <TituloCard>
+                              {item.nome}
+                            </TituloCard>
+                            <TextoCard>
+                              {item.descricao}
+                            </TextoCard>
+                            <TextoCard>
+                              R$ {item.preco}
+                            </TextoCard>
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                  </MenuRow>
+                ))}
+              </MenuContent>
+            )}
+            <OrderContainer style={{ color: "black" }}>
+              <h4>Pedido:</h4>
+              <ul>
+                {selectedItems.map((item, index) => (
+                  <li key={index}>{item[0]}</li>
+                ))}
+              </ul>
+              <ConfirmButton onClick={confirmarPedido}>Confirmar Pedido</ConfirmButton>
+            </OrderContainer>
+          </Col>
+        </Row>
+      </Container>
+      <ToastContainer>
       <Toast show={showA} onClose={() => setShowA(false)} style={{fontSize: "24px", color: "black"}}>
+          <Toast.Header>
+            <img height="32px" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" className="rounded me-2" alt="" />
+            <strong className="me-auto">Sviluppatori informa: </strong>
+            <small>1 segundo</small>
+          </Toast.Header>
+          <Toast.Body>Seu garçom foi chamado. Por favor, aguarde!</Toast.Body>
+        </Toast>
+        <Toast show={showB} onClose={() => setShowB(false)} style={{fontSize: "24px", color: "black"}}>
         <Toast.Header>
           <img height="32px" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" className="rounded me-2" alt="" />
           <strong className="me-auto">Sviluppatori informa: </strong>
           <small>1 segundo</small>
         </Toast.Header>
-        <Toast.Body>Seu garçom foi chamado. Por favor, aguarde!</Toast.Body>
-      </Toast>
-      <Toast show={showB} onClose={() => setShowB(false)} style={{fontSize: "24px", color: "black"}}>
-      <Toast.Header>
-        <img height="32px" src="https://media.discordapp.net/attachments/1082483101487333499/1128395434495316089/image.png?width=705&height=662" className="rounded me-2" alt="" />
-        <strong className="me-auto">Sviluppatori informa: </strong>
-        <small>1 segundo</small>
-      </Toast.Header>
-      <Toast.Body>Seu pedido foi feito!</Toast.Body>
-    </Toast>
-      <h1>Menu de Pizzas</h1>
-    <Container fluid style={{paddingLeft: "0px"}}>
-        <Row>
-            <Col xs={2}>
-                <div className="actions-container">
-                    <button className="action-button" onClick={chamarGarcom}>Chamar Garçom</button>
-                    <button className="action-button" onClick={navegarPagamento}>Efetuar Pagamento</button>
-                </div>
-            </Col>
-            <Col xs={8}>
-                <div className="menu-container">
-                    <ul className="menu-list">
-                    {menuOptions.map((option, i) => (
-                        <li
-                            key={i}
-                            className={`menu-item  ${
-                            selectedMenu === i ? 'active' : ''
-                            }`}
-                            onClick={() => handleMenuItemClick(i)}
-                        >
-                            {option}
-                        </li>
-                    ))} 
-                    </ul>
-                </div>
-                {selectedMenu !== null && (
-                  <div className="menu-content">
-                    {menuItems.map((item, index) => (
-                      <div key={index} className="menu-row">
-                        <Card style={{ backgroundColor: "#abb78b", border: "0px", cursor: "pointer", marginBottom: "16px" }} onClick={() => handleMenuItemSelect([item.nome,item.preco])}>
-                          <Card.Img src={item.imagem} style={{ width: "160px", height: "160px", marginLeft: "16px", margin: "auto" }} alt="Pizza" />
-                          <Card.Body>
-                            <Card.Text>
-                              <TituloCard>
-                                {item.nome}
-                              </TituloCard>
-                              <TextoCard>
-                                {item.descricao}
-                              </TextoCard>
-                              <TextoCard>
-                                R$ {item.preco}
-                              </TextoCard>
-                            </Card.Text>
-                          </Card.Body>
-                        </Card>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                <div className="order-container" style={{color: "black"}}>
-                    <h4>Pedido:</h4>
-                    <ul>
-                    {selectedItems.map((item, index) => (
-                        <li key={index}>{item[0]}</li>
-                    ))}
-                    </ul>
-                    <button className="confirm-button" onClick={confirmarPedido}>
-                    Confirmar Pedido
-                    </button>
-                </div>
-            </Col>
-        </Row>
-    </Container>
+        <Toast.Body>Seu pedido foi feito!</Toast.Body>
+        </Toast>
+      </ToastContainer>
     </Body>
   );
 }
 
 export default Cardapio
+
