@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Sviluppatori Pizzaria
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Olá! Bem vindos a Sviluppatori Pizzaria. Este projeto é um site criado com a biblioteca react para criar um site de uma pizzaria que esteja integrada com as novas tecnologias e que as utiliza o máximo possível.
+A Sviluppatori Pizzaria é dividida em duas frentes: A parte do cliente e do funcionário. O acesso a parte do cliente é feito através de uma tela instaurada nas mesas que contém todas as funcionalidades necessárias para o cliente aproveitar sua experiência ao máximo. Já a tela do funcionário é dividida em quatro vertentes: administrador, garçom, pizzaiolo e recepção. Cada vertente tem um método de acesso específico que direciona o usuário a tela.
 
-## Available Scripts
+## Link para a plataforma
 
-In the project directory, you can run:
+[Sviluppatori Pizzaria](https://d2yeoa37wbc5z6.cloudfront.net)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estrutura do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A plataforma contém uma tela inicial que somente os funcionários do estabelecimento possuem acesso. O cliente nunca tem acesso a essa tela.
 
-### `npm test`
+Se os funcionários estiveram configurando a tela de cada uma das mesas, eles selecionaram a opção cliente. Caso contrário, selecionaram a opção funcionário.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cliente
 
-### `npm run build`
+A tela do cliente possui um cardápio em que pode selecionar os produtos que deseja consumir, pode chamar um garçom se precisar de alguma assistência humana, assim como pode exigir o pagamento. O pagamento não é feito pela tela, ele só um método para pedir a conta.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Funcionário
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A seção do funcionário exige, primeiramente, um login para ela poder ser acessado por completo. Cada vertente, como já foi descrita acima tem um método de acesso específico, isto é, um email e uma senha pré-definidos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Administrador
 
-### `npm run eject`
+Caso o usuário seja um administrador, ele é responsável por gerenciar o estoque do estabelecimento, assim como a parte financeira.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Garçom
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Caso o usuário seja um garçom, ele possui duas telas em que pode consultar o status de pedido de uma mesa, assim como pode consultar se alguma mesa necessita de assistência ou se está pronta para fechar a conta.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Pizzaiolo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Caso o usuário seja um pizzaiolo, ele tem acesso à todos os pedidos ainda não prontos.
 
-## Learn More
+#### Recepção
+Caso o usuário seja da recepção, ele tem acesso a duas telas. Uma delas é de controle das mesas, isto é, se ela está livre, reservada ou ocupada. A outra é de controle de pedidos feitos para viagem.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Outros repositórios
+Aqui está o acesso aos outros repositórios criados para o projeto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Repositório 1](https://github.com/MateusCMartins724/SviluppatoriPizzaria)
+[Repositório 2](https://github.com/Maua-Dev/hack_g4_sviluppatori_front)
