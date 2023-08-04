@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import Login from './admin/Login'
 import AdminFinanceiro from './admin/AdminFinanceiro';
 import AdminIngredientes from './admin/AdminIngredientes';
-import AdminFeedback from './admin/AdminFeedback';
 import Cardapio from './cliente/Cardapio';
 import Pagamento from './cliente/Pagamento';
 import GarcomPedidos from './garcom/GarcomPedidos';
@@ -25,7 +24,6 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/admin/financeiro" element={<AdminFinanceiro />} />
       <Route path="/admin/ingredientes" element={<AdminIngredientes />} />
-      <Route path="/admin/feedback" element={<AdminFeedback />} />
       <Route path="/cardapio" element={<Cardapio />} />
       <Route path="/pagamento" element={<Pagamento />} />
       <Route path="/garcom/pedidos" element={<GarcomPedidos />} />
