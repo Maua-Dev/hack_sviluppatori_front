@@ -14,25 +14,28 @@ import PizzaioloPedidos from './pizzaiolo/PizzaioloPedidos';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MesasRecepcionista from './recepcionista/MesasRecepcionista';
 import PedidosRecepcionista from './recepcionista/PedidosRecepcionista';
+import PagamentoProvider from './cliente/context/Pagamento';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-  <Routes>
-    <Route index path="/" element={<Inicio />}/>
-    <Route path="/login" element={<Login />} />
-    <Route path="/admin/financeiro" element={<AdminFinanceiro />} />
-    <Route path="/admin/ingredientes" element={<AdminIngredientes />} />
-    <Route path="/admin/feedback" element={<AdminFeedback />} />
-    <Route path="/cardapio" element={<Cardapio />} />
-    <Route path="/pagamento" element={<Pagamento />} />
-    <Route path="/garcom/pedidos" element={<GarcomPedidos />} />
-    <Route path="/garcom/mesas" element={<GarcomMesas />} />
-    <Route path="/pizzaiolo/pedidos" element={<PizzaioloPedidos />} />
-    <Route path="/recepcionista/mesas" element={<MesasRecepcionista />} />
-    <Route path="/recepcionista/pedidos" element={<PedidosRecepcionista />} />
-  </Routes>
-  </BrowserRouter>
+  <PagamentoProvider>
+    <BrowserRouter>
+    <Routes>
+      <Route index path="/" element={<Inicio />}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/admin/financeiro" element={<AdminFinanceiro />} />
+      <Route path="/admin/ingredientes" element={<AdminIngredientes />} />
+      <Route path="/admin/feedback" element={<AdminFeedback />} />
+      <Route path="/cardapio" element={<Cardapio />} />
+      <Route path="/pagamento" element={<Pagamento />} />
+      <Route path="/garcom/pedidos" element={<GarcomPedidos />} />
+      <Route path="/garcom/mesas" element={<GarcomMesas />} />
+      <Route path="/pizzaiolo/pedidos" element={<PizzaioloPedidos />} />
+      <Route path="/recepcionista/mesas" element={<MesasRecepcionista />} />
+      <Route path="/recepcionista/pedidos" element={<PedidosRecepcionista />} />
+    </Routes>
+    </BrowserRouter>
+  </PagamentoProvider>
   
 );
 

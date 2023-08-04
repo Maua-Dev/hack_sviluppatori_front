@@ -1,13 +1,17 @@
 import React from 'react'
-import axios from "axios";
 import {Container, InputGroup} from 'react-bootstrap';
 import {BodyLogin, Card, ContainerLogo,
    ImgLogo, ContainerForm, Button,
    ContainerLogin, Input, InputSvg,
    InputDiv, ContainerCard} from '../admin/styled-components/Login.jsx';
+
+import { useNavigate } from 'react-router-dom';
 function Login(){
     const [inputUsername, setInputUsername] = React.useState("");
     const [inputSenha, setInputSenha] = React.useState("");
+
+    const navigate = useNavigate();
+    
 
     function entrarUsuario(){
         let mensagem = {}
@@ -22,11 +26,42 @@ function Login(){
                 senha: inputSenha,
             }  
         }
-        axios.post("http://localhost:3001/login", mensagem).then((res) => {
-            document.location.href = "/admin/ingredientes";
-        }).catch((err) => {
-            alert("Esse usuário não existe!")
-        });
+        const admin = {
+          username: "adminSvilu@Dev.com",
+          senha: "@Svilu32",
+        }
+        const pizzaiolo = {
+          username: "pizzaioloSvilu@Dev.com",
+          senha: "3333",
+        }
+        const garcom = {
+          username: "garcomSvilu@Dev.com",
+          senha: "2222",
+        }
+        const recepcionista = {
+          username: "recepcaoSvilu@Dev.com",
+          senha: "7777",
+        }
+
+        if (mensagem.username === admin.username && mensagem.senha === admin.senha){
+          alert("Bem vindo administrador")
+          navigate("/admin/ingredientes")
+        }
+        else if (mensagem.username === pizzaiolo.username && mensagem.senha === pizzaiolo.senha){
+          alert("Bem vindo pizzaiolo")
+          navigate("/pizzaiolo/pedidos")
+        }
+        else if (mensagem.username === garcom.username && mensagem.senha === garcom.senha){
+          alert("Bem vindo garçom")
+          navigate("/garcom/pedidos")
+        }
+        else if (mensagem.username === recepcionista.username && mensagem.senha === recepcionista.senha){
+          alert("Bem vindo recepcionista")
+          navigate("/recepcionista/pedidos")
+        }
+        else{
+          alert("Usuário ou senha incorretos")
+        }
         setInputUsername("");
         setInputSenha("");
     }

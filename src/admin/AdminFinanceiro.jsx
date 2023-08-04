@@ -11,6 +11,15 @@ import React from 'react'
 import axios from "axios";
 import { Modal, Button } from 'react-bootstrap';
 
+let listaFinanceiro = [
+    {
+        identificacao: "Fornecedor de Caixas",
+        quantia: "100",
+        status: "Pix",
+    }
+]
+
+
 function AdminFinanceiro(){
     const [isShow, setIsShow] = React.useState(false);
 
@@ -28,10 +37,8 @@ function AdminFinanceiro(){
     const [inputStatus, setInputStatus] = React.useState("");
 
     React.useEffect(()=>{
-        const resposta =  axios.get("http://localhost:3001/financeiro");
-        resposta.then((dados) => {
-            setFinanceiro(dados.data);
-        })});
+        setFinanceiro(listaFinanceiro);
+    },[])
 
     function cadastrarFinanceiro(){
         let mensagem = {}
@@ -48,6 +55,7 @@ function AdminFinanceiro(){
             }
             
         }
+        listaFinanceiro.push(mensagem);
         setInputIdentificacao("");
         setInputQuantia("");
         setInputStatus("");
@@ -57,7 +65,7 @@ function AdminFinanceiro(){
 
     return(
         <Body>
-            <Modal  show={isShow} onHide={() => setIsShow(false)}>
+            <Modal style={{fontFamily: "Arial"}} show={isShow} onHide={() => setIsShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title style={{color: "black"}}>Ingredientes</Modal.Title>
                 </Modal.Header>

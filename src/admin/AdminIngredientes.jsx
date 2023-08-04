@@ -8,9 +8,15 @@ import {Input, Label} from "../admin/styled-components/Modal";
 import {BotoesDiv, Botao, BotaoA} from "../admin/styled-components/Botoes";
 import {TabelaD, Tabela, TabelaRow, TabelaHead, TabelaData, TabelaH, TabelaTdBotao, TabelaBotao, Svg} from "../admin/styled-components/Tabela";
 import React from 'react'
-import axios from "axios";
 import { Modal, Button } from 'react-bootstrap';
 
+let listaIngredientes = [
+    {
+        nome: "Molho de Tomate",
+        quantidade: "2kg",
+        preco: "50",
+    }
+]
 function Ingredientes(){
     const [isShow, setIsShow] = React.useState(false);
 
@@ -29,10 +35,8 @@ function Ingredientes(){
     const [inputPreco, setInputPreco] = React.useState("");
 
     React.useEffect(()=>{
-        const resposta =  axios.get("http://localhost:3001/ingredientes");
-        resposta.then((dados) => {
-            setIngredientes(dados.data);
-        })});
+        setIngredientes(listaIngredientes);
+    }, []);
 
     function createIngredientes(){
         let mensagem = {}
@@ -49,16 +53,18 @@ function Ingredientes(){
             }
             
         }
+        let newIngredientes = [...ingredientes, mensagem];
+        setIngredientes(newIngredientes);
+        
         setInputNome("");
         setInputQuantidade("");
         setInputPreco("");
-        axios.post("http://localhost:3001/ingredientes", mensagem);
         closeModal();
     }
     
     return(
         <Body>
-            <Modal  show={isShow} onHide={() => setIsShow(false)}>
+            <Modal style={{fontFamily: "Arial"}}  show={isShow} onHide={() => setIsShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title style={{color: "black"}}>Ingredientes</Modal.Title>
                 </Modal.Header>
