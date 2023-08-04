@@ -24,7 +24,7 @@ function Inicio() {
       <Container>
         <Row>
           <Col md={12} >
-            <H1>A melhor pizzaria de <b>SCS</b></H1>
+            <H1>A melhor pizzaria de SCS</H1>
             <Text>Escolha uma das opções abaixo: </Text>
           </Col>
         </Row>

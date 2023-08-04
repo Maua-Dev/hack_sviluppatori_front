@@ -29,13 +29,13 @@ function PedidosRecepcionista(){
                                     display: "inline-block",
                                     fontWeight: 'bold',
                                     fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
+                                }}>Pedido #4384</Card.Header>
                                 <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
-                                        Pizza Calabresa
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Pizza Mussarela
                                     </Card.Text>
-                                    <Card.Text>
-                                        Pronto
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Suco de Laranja
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -50,13 +50,13 @@ function PedidosRecepcionista(){
                                     display: "inline-block",
                                     fontWeight: 'bold',
                                     fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
+                                }}>Pedido #4385</Card.Header>
                                 <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
-                                        Pizza Calabresa
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Pizza Peperoni
                                     </Card.Text>
-                                    <Card.Text>
-                                        Pronto
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Guaraná
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -71,12 +71,77 @@ function PedidosRecepcionista(){
                                     display: "inline-block",
                                     fontWeight: 'bold',
                                     fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
+                                }}>Pedido #4385</Card.Header>
                                 <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Pizza Peperoni
+                                    </Card.Text>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Guaraná
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Pedido>
+                    </Col>
+                    <Col xs={3}>
+                        <Pedido>
+                            <Card style={{
+                                margin: '1rem',
+                            }}>
+                                <Card.Header style={{
+                                    backgroundColor: 'white',
+                                    borderBottom: '1px solid black',
+                                    display: "inline-block",
+                                    fontWeight: 'bold',
+                                    fontSize: '2rem'
+                                }}>Pedido #4387</Card.Header>
+                                <Card.Body>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Pizza Frango Catupiry
+                                    </Card.Text>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Sem bebida
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Pedido>
+                        <Pedido>
+                            <Card style={{
+                                margin: '1rem',
+                            }}>
+                                <Card.Header style={{
+                                    backgroundColor: 'white',
+                                    borderBottom: '1px solid black',
+                                    display: "inline-block",
+                                    fontWeight: 'bold',
+                                    fontSize: '2rem'
+                                }}>Pedido #4388</Card.Header>
+                                <Card.Body>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
                                         Pizza Calabresa
                                     </Card.Text>
-                                    <Card.Text>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Suco de Uva
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Pedido>
+                        <Pedido>
+                            <Card style={{
+                                margin: '1rem',
+                            }}>
+                                <Card.Header style={{
+                                    backgroundColor: 'white',
+                                    borderBottom: '1px solid black',
+                                    display: "inline-block",
+                                    fontWeight: 'bold',
+                                    fontSize: '2rem'
+                                }}>Pedido #4389</Card.Header>
+                                <Card.Body>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Pizza Calabresa
+                                    </Card.Text>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
                                         Pronto
                                     </Card.Text>
                                 </Card.Body>
@@ -94,13 +159,13 @@ function PedidosRecepcionista(){
                                     display: "inline-block",
                                     fontWeight: 'bold',
                                     fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
+                                }}>Pedido #4390</Card.Header>
                                 <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
-                                        Pizza Calabresa
+                                    <Card.Text style={{fontWeight: "bold"}}>
+                                        Pizza de Mussarela
                                     </Card.Text>
-                                    <Card.Text>
-                                        Pronto
+                                    <Card.Text style={{fontWeight: "bold"}}>
+                                        Suco de Laranja
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -115,13 +180,13 @@ function PedidosRecepcionista(){
                                     display: "inline-block",
                                     fontWeight: 'bold',
                                     fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
+                                }}>Pedido #4391</Card.Header>
                                 <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
+                                    <Card.Text  style={{fontWeight: "bold"}}>
                                         Pizza Calabresa
                                     </Card.Text>
-                                    <Card.Text>
-                                        Pronto
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Sprite
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -136,78 +201,13 @@ function PedidosRecepcionista(){
                                     display: "inline-block",
                                     fontWeight: 'bold',
                                     fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
+                                }}>Pedido #4392</Card.Header>
                                 <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
-                                        Pizza Calabresa
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Pizza de Peperoni
                                     </Card.Text>
-                                    <Card.Text>
-                                        Pronto
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Pedido>
-                    </Col>
-                    <Col xs={3}>
-                    <Pedido>
-                            <Card style={{
-                                margin: '1rem',
-                            }}>
-                                <Card.Header style={{
-                                    backgroundColor: 'white',
-                                    borderBottom: '1px solid black',
-                                    display: "inline-block",
-                                    fontWeight: 'bold',
-                                    fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
-                                <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
-                                        Pizza Calabresa
-                                    </Card.Text>
-                                    <Card.Text>
-                                        Pronto
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Pedido>
-                        <Pedido>
-                            <Card style={{
-                                margin: '1rem',
-                            }}>
-                                <Card.Header style={{
-                                    backgroundColor: 'white',
-                                    borderBottom: '1px solid black',
-                                    display: "inline-block",
-                                    fontWeight: 'bold',
-                                    fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
-                                <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
-                                        Pizza Calabresa
-                                    </Card.Text>
-                                    <Card.Text>
-                                        Pronto
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Pedido>
-                        <Pedido>
-                            <Card style={{
-                                margin: '1rem',
-                            }}>
-                                <Card.Header style={{
-                                    backgroundColor: 'white',
-                                    borderBottom: '1px solid black',
-                                    display: "inline-block",
-                                    fontWeight: 'bold',
-                                    fontSize: '2rem'
-                                }}>Pedido 1</Card.Header>
-                                <Card.Body>
-                                    <Card.Text style={{borderBottom: "1px solid #1A623C"}}>
-                                        Pizza Calabresa
-                                    </Card.Text>
-                                    <Card.Text>
-                                        Pronto
+                                    <Card.Text  style={{fontWeight: "bold"}}>
+                                        Água
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
