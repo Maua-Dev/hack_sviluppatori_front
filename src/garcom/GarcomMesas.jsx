@@ -12,7 +12,7 @@ function GarcomMesas(){
         axios.get('http://localhost:3001/mesas')
         .then((response) => {
             setMesas(response.data.filter((mesa) => mesa.chamada === false))
-        })});
+    })});
 
     return(
         <Body>

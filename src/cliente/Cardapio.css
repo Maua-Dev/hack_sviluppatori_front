@@ -12,15 +12,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
-    margin-right: -60px;
   }
   
   .menu-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Forces each row to take 100% width of the container */
-    margin-bottom: 20px; /* Add some vertical space between rows */
+    flex: 0 0 calc(25% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
+  
+  .menu-content:after {
+    flex-basis: calc(25% - 20px);
+    margin-right: 20px;
+  }
+  
+  
+
   
 
   h1 {

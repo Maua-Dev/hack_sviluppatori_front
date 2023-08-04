@@ -7,16 +7,20 @@ import {NavbarD, NavbarBrandD} from "../styled-components/Navbar";
 import {BotoesDiv, Botao, BotaoA} from "../admin/styled-components/Botoes";
 import {TabelaD, Tabela, TabelaRow, TabelaHead, TabelaData, TabelaH, Svg} from "../admin/styled-components/Tabela";
 import React from 'react'
-import axios from "axios";
+
+let listaFeedback = [
+    {
+        mesa: "2",
+        nota: 5,
+        comentario: "A pizza estava sem sal",
+    }]
 
 function AdminFeedback(){
     const [feedback, setFeedback] = React.useState([]);
 
     React.useEffect(()=>{
-        const resposta =  axios.get("http://localhost:3001/feedback");
-        resposta.then((dados) => {
-            setFeedback(dados.data);
-    })});
+        setFeedback(listaFeedback)
+    },[]);
     return(
         <Body>
             <Navbar>
@@ -61,17 +65,17 @@ function AdminFeedback(){
                         <Tabela>
                             <TabelaHead>
                                 <TabelaRow>
-                                    <TabelaH>ID</TabelaH>
-                                    <TabelaH>Data</TabelaH>
+                                    <TabelaH>Mesa</TabelaH>
+                                    <TabelaH>Nota</TabelaH>
                                     <TabelaH>Feedback</TabelaH>
                                 </TabelaRow>
                             </TabelaHead>
                             <tbody>
                             {feedback.map((fb, i) => (
                                 <TabelaRow key={i}>
-                                    <TabelaData>{fb.identificacao}</TabelaData>
-                                    <TabelaData>R$ {fb.quantia}</TabelaData>
-                                    <TabelaData>{fb.status}</TabelaData>
+                                    <TabelaData>Mesa {fb.mesa}</TabelaData>
+                                    <TabelaData>{fb.nota}</TabelaData>
+                                    <TabelaData style={{fontSize: "16px"}}>{fb.comentario}</TabelaData>
                                 </TabelaRow>
                             ))}
                             </tbody>
